@@ -12,15 +12,22 @@
 	
  	<context:component-scan base-package="com.pluralsight.cxfdemo" />
 
-	<jaxws:endpoint 
-	  id="helloWorld" 
-	  implementor="com.pluralsight.cxfdemo.HelloWorldImpl" 
-	  address="/HelloWorld" />
+	<jaxws:endpoint
+		id="helloWorld"
+		implementor="com.pluralsight.cxfdemo.HelloWorldImpl"
+		address="/HelloWorld">
+	</jaxws:endpoint>
 	  
 	<jaxws:endpoint
 		id="orders"
 		implementor="com.pluralsight.cxfdemo.orders.DefaultOrdersEndpoint"
 		address="/services/orders">
+
+		<jaxws:inInterceptors>
+			<ref bean="orderServiceSoapHeaderInInterceptor" />
+		</jaxws:inInterceptors>
 	</jaxws:endpoint>
+
+	<bean id="orderServiceSoapHeaderInInterceptor" class="com.pluralsight.cxfdemo.orders.OrderServiceSoapHeaderInInterceptor" />
 	  
 </beans>

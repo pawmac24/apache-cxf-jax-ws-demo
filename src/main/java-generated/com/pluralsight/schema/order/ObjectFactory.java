@@ -35,6 +35,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link OrderInquiryType }
+     * 
+     */
+    public OrderInquiryType createOrderInquiryType() {
+        return new OrderInquiryType();
+    }
+
+    /**
+     * Create an instance of {@link OrderInquiryResponseType }
+     * 
+     */
+    public OrderInquiryResponseType createOrderInquiryResponseType() {
+        return new OrderInquiryResponseType();
+    }
+
+    /**
+     * Create an instance of {@link OrderType }
+     * 
+     */
+    public OrderType createOrderType() {
+        return new OrderType();
+    }
+
+    /**
      * Create an instance of {@link BookType }
      * 
      */
@@ -48,30 +72,6 @@ public class ObjectFactory {
      */
     public OrderItemType createOrderItemType() {
         return new OrderItemType();
-    }
-
-    /**
-     * Create an instance of {@link OrderInquiryType }
-     * 
-     */
-    public OrderInquiryType createOrderInquiryType() {
-        return new OrderInquiryType();
-    }
-
-    /**
-     * Create an instance of {@link OrderType }
-     * 
-     */
-    public OrderType createOrderType() {
-        return new OrderType();
-    }
-
-    /**
-     * Create an instance of {@link OrderInquiryResponseType }
-     * 
-     */
-    public OrderInquiryResponseType createOrderInquiryResponseType() {
-        return new OrderInquiryResponseType();
     }
 
     /**
